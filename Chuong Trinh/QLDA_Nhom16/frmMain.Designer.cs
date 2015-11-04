@@ -45,6 +45,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.saoLưuVàPhụcHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,6 +70,8 @@
             // 
             // hệThốngToolStripMenuItem
             // 
+            this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saoLưuVàPhụcHồiToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
@@ -218,6 +221,13 @@
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
+            // saoLưuVàPhụcHồiToolStripMenuItem
+            // 
+            this.saoLưuVàPhụcHồiToolStripMenuItem.Name = "saoLưuVàPhụcHồiToolStripMenuItem";
+            this.saoLưuVàPhụcHồiToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.saoLưuVàPhụcHồiToolStripMenuItem.Text = "Sao Lưu và phục hồi";
+            this.saoLưuVàPhụcHồiToolStripMenuItem.Click += new System.EventHandler(this.saoLưuVàPhụcHồiToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -264,5 +274,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem saoLưuVàPhụcHồiToolStripMenuItem;
     }
 }

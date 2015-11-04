@@ -39,7 +39,7 @@
   <ItemGroup>
     <Reference Include="ConfigSql_Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Dung.VT\Desktop\ConfigSql_Core.dll</HintPath>
+      <HintPath>bin\Debug\ConfigSql_Core.dll</HintPath>
     </Reference>
     <Reference Include="Excel">
       <HintPath>..\Document\Excel.dll</HintPath>

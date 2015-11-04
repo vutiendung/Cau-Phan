@@ -207,6 +207,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Thật rắc rối khi không thường xuyên sao lưu cơ sở dữ liệu\r\nNếu có vẫn đề trục trặ" +
     "c hãy gọi ngay cho đội kĩ thuật viên!\r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SLPHDuLieu
             // 

@@ -98,5 +98,11 @@ namespace WindowsFormsApplication2
         {
             this.Dispose();
         }
+
+        private void saoLưuVàPhụcHồiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SLPHDuLieu frm = new SLPHDuLieu();
+            frm.ShowDialog();
+        }
     }
 }

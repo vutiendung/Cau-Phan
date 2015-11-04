@@ -15,8 +15,12 @@ namespace WindowsFormsApplication2
     {
         private static ConnectToServer instance = null;
         private static SqlConnection conn;
+
         private static ConfigSql_Core.Class1 config = new Class1();
 
+        /// <summary>
+        /// Get instance of class
+        /// </summary>
         public static ConnectToServer Instance
         {
             get 
@@ -29,11 +33,20 @@ namespace WindowsFormsApplication2
             }
         }
 
+        /// <summary>
+        /// Constructer
+        /// </summary>
         private ConnectToServer()
         {
             conn = new SqlConnection();
             conn.ConnectionString = config.GetConnectionString();
         }
+
+        /// <summary>
+        /// Return tabel from SQl command
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
         public DataTable GetTable(string sql)
         {
             if (conn.State == ConnectionState.Closed)
@@ -45,10 +58,12 @@ namespace WindowsFormsApplication2
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             return dt;
-
-            conn.Close();
         }
 
+        /// <summary>
+        /// Excute SQL do not return
+        /// </summary>
+        /// <param name="sql"></param>
         public void ExecuteQuerryNotReturn(string sql)
         {
             if (conn.State == ConnectionState.Closed)
@@ -62,8 +77,13 @@ namespace WindowsFormsApplication2
             cmd.ExecuteNonQuery();
             cmd.Dispose();
 
-            conn.Close();
         }
+
+        /// <summary>
+        /// Excute command sql
+        /// </summary>
+        /// <param name="storename"></param>
+        /// <returns></returns>
         public DataTable ThucHiencommand(string storename)
         {
             if (conn.State == ConnectionState.Closed)
@@ -79,6 +99,13 @@ namespace WindowsFormsApplication2
             da.Fill(dt);
             return dt;
 
+        }
+
+        /// <summary>
+        /// Close connection
+        /// </summary>
+        public void CloseConnecttion()
+        {
             conn.Close();
         }
       
