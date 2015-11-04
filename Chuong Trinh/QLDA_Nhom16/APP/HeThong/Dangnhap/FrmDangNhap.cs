@@ -44,9 +44,10 @@ namespace WindowsFormsApplication2
                     {
                         if (dt.Rows[0][0].ToString() == tk.Pass)
                         {
-                            SplashScreen SplashScreen = new SplashScreen();
-                            SplashScreen.Show();
                             this.Hide();
+                            SplashScreen SplashScreen = new SplashScreen();
+                            SplashScreen.ShowDialog();
+                            this.Close();
                             string sql1 = "SELECT MOTA FROM NHANVIEN, CHUCVU WHERE CHUCVU.MACHUCVU = NHANVIEN.MACHUCVU AND MANHANVIEN = '" + _txtusername.Text + "'";
                             frmMain.quyen = ConnectToServer.Instance.GetTable(sql1).Rows[0][0].ToString().Trim();
                             frmMain.maNV = _txtusername.Text;
@@ -73,8 +74,8 @@ namespace WindowsFormsApplication2
                     }
                 }
                 
-            } catch(Exception ex) {
-                MessageBox.Show(ex.Message,"Thông báo", MessageBoxButtons.OK);
+            } catch{
+                //MessageBox.Show(ex.Message,"Thông báo", MessageBoxButtons.OK);
             }
             if (_checkRemember.Checked)
             {

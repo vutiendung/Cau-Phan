@@ -29,6 +29,7 @@ namespace WindowsFormsApplication2.APP.SplashScreen
                 this.ShowInTaskbar = false;
                 this.Hide();
                 main.ShowDialog();
+                this.Close();
             }
         }
         protected override CreateParams CreateParams

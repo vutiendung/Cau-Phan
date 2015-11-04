@@ -104,5 +104,63 @@ namespace WindowsFormsApplication2
             SLPHDuLieu frm = new SLPHDuLieu();
             frm.ShowDialog();
         }
+
+        private void nhậpThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNhapHang frmn = new FrmNhapHang();
+            frmn.ShowDialog();
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHoaDonBanHang frm = new FrmHoaDonBanHang();
+            frm.ShowDialog();
+        }
+
+        private void đơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDVT frm = new FrmDVT();
+            frm.ShowDialog();
+        }
+
+        private void loạiThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLoaiThuoc frm = new FrmLoaiThuoc();
+            frm.ShowDialog();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _panelMain.Controls.Clear();
+
+            UCNhanVien frm = new UCNhanVien();
+            frm.Dock = DockStyle.Fill;
+            _panelMain.Controls.Add(frm);
+        }
+
+        private void nhàCunCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNhaCungCap frm = new FrmNhaCungCap();
+            frm.ShowDialog();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmKhachHang frm = new FrmKhachHang();
+            frm.ShowDialog();
+        }
+
+        private void thuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UCThuoc frm = new UCThuoc();
+            frm.Dock = DockStyle.Fill;
+            _panelMain.Controls.Clear();
+            _panelMain.Controls.Add(frm);
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
